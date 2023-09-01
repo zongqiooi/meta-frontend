@@ -10,8 +10,9 @@ In this exercise you will you will practice creating a simple HTML document.<br>
 > - To view this file in Preview mode, right click on this README.md file and `Open Preview`
 > - Select your code file in the code tree, which will open it up in a new VSCode tab.
 > - Drag your assessment code files over to the second column.
-> - Great work! You can now see instructions and code at the same time!
->   <br><br>
+> - Great work! You can now see instructions and code at the same time.
+>   > > > > > > b17ed98db03796137c3807d728502c2e5c14c31a
+>   > > > > > > <br><br>
 
 <br>
 
