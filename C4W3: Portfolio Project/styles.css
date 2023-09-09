@@ -1,0 +1,15 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #edefee;
+  font-family: "Markazi Text", serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
