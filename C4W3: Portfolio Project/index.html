@@ -22,18 +22,25 @@
     <title>Little Lemon</title>
   </head>
   <body>
-    <header>
-      <img src="./img/Asset 14@4x.png" alt="Little Lemon Logo" />
+    <header id="header">
+      <img
+        class="header-logo"
+        src="./img/Asset 14@4x.png"
+        alt="Little Lemon Logo"
+        height="130px"
+      />
     </header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#book">Book</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
+    <nav id="nav-bar">
+      <div class="nav-round-banner">
+        <ul class="nav-flex-container">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#book">Book</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
     </nav>
-    <main>
+    <main id="main">
       <section>
         <article>
           <h1>Heading 1</h1>
@@ -44,11 +51,21 @@
         </article>
       </section>
     </main>
-    <footer>
-      <div>
-        <img src="./img/Asset 18@4x.png" alt="Little Lemon Footer Logo" />
+    <footer id="footer">
+      <div class="footer-flex-container">
+        <div class="footer-left">
+          <img
+            src="./img/Asset 7@4x.png"
+            alt="Little Lemon Footer Logo"
+            width="100%"
+            height="100%"
+          />
+        </div>
+        <div class="footer-right">
+          <hr />
+          <div>Copyright Little Lemon</div>
+        </div>
       </div>
-      <div>Copyright Little Lemon</div>
     </footer>
   </body>
 </html>

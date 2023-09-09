@@ -5,6 +5,34 @@ body {
   font-family: "Markazi Text", serif;
 }
 
+.header-logo {
+  display: block;
+  text-align: center;
+  margin: 50px auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.nav-round-banner {
+  max-width: 90vw;
+  background-color: #333333;
+  border-radius: 15px;
+  margin: 0px auto;
+}
+
+.nav-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+ul a {
+  display: block;
+  font-size: 30px;
+  margin: 10px 0px;
+}
+
 li {
   list-style-type: none;
 }
@@ -12,4 +40,39 @@ li {
 a {
   text-decoration: none;
   color: white;
+}
+
+.footer-flex-container {
+  max-width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+}
+
+.footer-left {
+  display: inline-block;
+  max-width: 45px;
+  min-height: 75px;
+  padding-left: 10px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+.footer-right div {
+  font-size: 20px;
+  font-weight: bold;
+  align-self: flex-end;
+  color: #495e57;
+}
+
+hr {
+  background: #495e57;
+  font-size: 1.5em;
+  height: 2px;
+  width: 500px;
 }
