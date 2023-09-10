@@ -39,6 +39,11 @@ ul a {
   margin: 10px 0px;
 }
 
+ul a:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+
 li {
   list-style-type: none;
 }
@@ -57,6 +62,11 @@ li a {
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
+}
+
+.promotion:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
 }
 
 .promotion h1 {
@@ -89,6 +99,11 @@ li a {
   border-radius: var(--border-radius-size);
   padding: 30px;
   font-size: 20px;
+}
+
+.info-card-flex-container:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
 }
 
 article h2 {
