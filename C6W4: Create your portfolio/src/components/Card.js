@@ -12,16 +12,18 @@ const Card = ({ title, description, imageSrc }) => {
       borderRadius="xl"
     >
       <Image src={imageSrc} alt={title} borderRadius="xl" />
-      <Heading as="h2" size="xl">
-        {title}
-      </Heading>
-      <Text fontSize="lg" color="light-grey">
-        {description}
-      </Text>
-      <HStack>
-        <Text fontSize="lg">See more</Text>
-        <FontAwesomeIcon icon={faArrowRight} size="1x" color="black" />
-      </HStack>
+      <VStack alignItems="flex-start" p={5} spacing={5}>
+        <Heading as="h4" size="md">
+          {title}
+        </Heading>
+        <Text fontSize="lg" color="#64748b">
+          {description}
+        </Text>
+        <HStack fontSize="md">
+          <Text>See more</Text>
+          <FontAwesomeIcon icon={faArrowRight} size="1x" color="black" />
+        </HStack>
+      </VStack>
     </VStack>
   );
 };
