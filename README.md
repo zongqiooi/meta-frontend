@@ -2,6 +2,14 @@
 
 A collection of my project submissions to Meta Front-End Developer Professional Certificate Course.
 
+# Tech stacks involved:
+
+1. HTML, CSS, JavaScript (Foundations, Intermediate, Advanced)
+2. React.js
+3. Git
+4. Chakra UI
+5. Figma
+
 # Courses
 
 1. Course 1: Introduction to Front-End Development
@@ -13,11 +21,6 @@ A collection of my project submissions to Meta Front-End Developer Professional 
 7. Course 7: Principles of UX/UI Design
 8. Course 8: Front-End Developer Capstone
 9. Course 9: Coding Interview Preparation
-
-# Time tracking
-
-Start date: 1/9/2023  
-End date:
 
 # Acknowledgement
 
