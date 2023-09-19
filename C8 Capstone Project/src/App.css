@@ -9,6 +9,7 @@
   --secondary-beige: #fbdabb;
   --secondary-grey: #edefee;
   --secondary-black: #333333;
+  --dark-grey: rgb(92, 92, 92);
 }
 
 li {
@@ -67,7 +68,7 @@ li {
 
 .reserve-button {
   background-color: var(--primary-yellow);
-  padding: 13px 35px;
+  padding: 10px 35px;
   border-radius: 12px;
   font-size: 20px;
   border: none;
@@ -77,5 +78,82 @@ li {
 .right-hero img {
   border-radius: 12px;
   position: absolute;
-  right: 10vw;
+  right: 8vw;
+}
+
+#special {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.special-top-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secondary-black);
+  font-size: 40px;
+  padding-top: 100px;
+}
+
+.online-menu-button {
+  background-color: var(--primary-yellow);
+  padding: 13px 30px;
+  border-radius: 12px;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+}
+
+.card {
+  background-color: var(--secondary-grey);
+  max-width: 400px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  overflow: hidden;
+}
+
+.card img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.card-flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card-top-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-btm-flex-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-top-flex-container p {
+  color: var(--secondary-orange);
+  font-weight: bold;
+}
+
+.card-middle {
+  color: var(--dark-grey);
+}
+
+.card-btm-flex-container p {
+  font-weight: bold;
+}
+
+.special-btm-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.special-btm-flex-container .card {
+  margin-top: 50px;
 }
