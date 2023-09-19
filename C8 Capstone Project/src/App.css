@@ -1,4 +1,30 @@
-#root {
+* {
+  font-family: "Karla", sans-serif;
+  font-family: "Markazi Text", serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
+}
+
+.nav-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10vw;
+}
+
+.links-flex-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +65,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
