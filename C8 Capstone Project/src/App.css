@@ -1,15 +1,22 @@
 * {
-  font-family: "Karla", sans-serif;
-  font-family: "Markazi Text", serif;
+  --font-Karla: "Karla", sans-serif;
+  --font-Markazi: "Markazi Text", serif;
   padding: 0px;
   margin: 0px;
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+  --secondary-orange: #ee9972;
+  --secondary-beige: #fbdabb;
+  --secondary-grey: #edefee;
+  --secondary-black: #333333;
 }
 
 li {
   list-style-type: none;
   font-size: 16px;
   font-weight: bold;
-  font-family: "Karla", sans-serif;
+  font-family: var(--font-Karla);
+  color: var(--secondary-black);
 }
 
 .nav-flex-container {
@@ -24,45 +31,51 @@ li {
   gap: 20px;
 }
 
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#hero {
+  background-color: var(--primary-green);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero-flex-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10vw;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-hero {
+  max-width: 30vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.left-hero h1 {
+  color: var(--primary-yellow);
+  font-size: 80px;
+  padding: 0px;
 }
 
-.card {
-  padding: 2em;
+.left-hero h3 {
+  color: var(--secondary-grey);
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
-.read-the-docs {
-  color: #888;
-} */
+.left-hero p {
+  color: var(--secondary-grey);
+  font-family: var(--font-Karla);
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.reserve-button {
+  background-color: var(--primary-yellow);
+  padding: 13px 35px;
+  border-radius: 12px;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+}
+
+.right-hero img {
+  border-radius: 12px;
+  position: absolute;
+  right: 10vw;
+}
