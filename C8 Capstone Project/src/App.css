@@ -12,6 +12,13 @@
   --dark-grey: rgb(92, 92, 92);
 }
 
+#special,
+#testimonials,
+#footer {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
 li {
   list-style-type: none;
   font-size: 16px;
@@ -82,8 +89,7 @@ li {
 }
 
 #special {
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-bottom: 100px;
 }
 
 .special-top-flex-container {
@@ -104,7 +110,7 @@ li {
   font-weight: bold;
 }
 
-.card {
+.special-card {
   background-color: var(--secondary-grey);
   max-width: 400px;
   border-top-left-radius: 30px;
@@ -112,39 +118,39 @@ li {
   overflow: hidden;
 }
 
-.card img {
+.special-card img {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
 
-.card-flex-container {
+.special-card-flex-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 20px;
 }
 
-.card-top-flex-container {
+.special-card-top-flex-container {
   display: flex;
   justify-content: space-between;
 }
 
-.card-btm-flex-container {
+.special-card-btm-flex-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.card-top-flex-container p {
+.special-card-top-flex-container p {
   color: var(--secondary-orange);
   font-weight: bold;
 }
 
-.card-middle {
+.special-card-middle {
   color: var(--dark-grey);
 }
 
-.card-btm-flex-container p {
+.special-card-btm-flex-container p {
   font-weight: bold;
 }
 
@@ -154,6 +160,66 @@ li {
   flex-wrap: wrap;
 }
 
-.special-btm-flex-container .card {
+.special-btm-flex-container .special-card {
   margin-top: 50px;
+}
+
+#testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: var(--primary-green);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#testimonials h1 {
+  text-align: center;
+  color: var(--secondary-grey);
+  font-size: 40px;
+}
+
+.testimonials-card-flex-container {
+  display: flex;
+  gap: 100px;
+}
+
+.testimonials-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px;
+  background-color: var(--secondary-grey);
+  border-radius: 8px;
+}
+
+.testimonials-user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#footer {
+  background-color: var(--primary-green);
+  color: var(--secondary-grey);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#footer li {
+  color: var(--secondary-grey);
+}
+
+.footer-list {
+  margin-top: 30px;
+}
+
+.footer-flex-container {
+  display: flex;
+  gap: 200px;
+}
+
+.footer-item-flex-container {
+  display: flex;
+  flex-direction: column;
 }
