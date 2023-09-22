@@ -208,6 +208,9 @@ li {
 
 #footer li {
   color: var(--secondary-grey);
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 5px;
 }
 
 .footer-list {
