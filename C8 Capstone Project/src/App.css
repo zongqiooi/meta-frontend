@@ -34,7 +34,7 @@ li {
   padding: 30px 10vw;
 }
 
-.nav-button-home {
+.active-link {
   background-color: #495e57;
   border-radius: 8px;
   color: white;
@@ -316,6 +316,68 @@ li {
 #footer h2 {
   font-weight: bold;
   font-size: 20px;
+}
+
+/* Reservations Page */
+.reservations-top {
+  background-color: #495e57;
+  padding: 50px 10vw;
+}
+
+.reservations-top label {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.reservations-header {
+  color: var(--primary-yellow);
+  font-size: 80px;
+  padding: 0px;
+}
+
+.reservations-bottom {
+  background-color: white;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  max-width: 80vw;
+  display: flex;
+  gap: 100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservations-form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80vw;
+  gap: 3vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.reservations-input {
+  display: flex;
+  flex-direction: column;
+  min-width: 30vw;
+  gap: 20px;
+}
+
+.reservations-submit-button {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.image-container {
+  max-width: 20vw;
+}
+
+.image-container img {
+  border-radius: 10px;
 }
 
 @media (max-width: 1550px) {

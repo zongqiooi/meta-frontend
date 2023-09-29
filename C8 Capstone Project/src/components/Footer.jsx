@@ -5,7 +5,11 @@ const Footer = () => {
     <footer id="footer">
       <div className="footer-flex-container">
         <div className="footer-left">
-          <img src={Logo} alt="Little Lemon Restaurant Logo" />
+          <img
+            src={Logo}
+            alt="Little Lemon Restaurant Logo"
+            style={{ borderRadius: "8px", padding: "10px" }}
+          />
         </div>
         <div className="footer-item-flex-container">
           <h2>Navigation</h2>

@@ -6,16 +6,31 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import MenuIcon from "@mui/icons-material/Menu";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
     <>
       <nav className="navbar-standard">
         <ul className="links-flex-container">
-          <li className="nav-button-home">Home</li>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Home
+            </NavLink>
+          </li>
           <li>About</li>
           <li>Menu</li>
-          <li>Reservations</li>
+          <li>
+            <NavLink
+              to="/reservations"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Reservations
+            </NavLink>
+          </li>
           <li>Order Online</li>
           <li>Login</li>
         </ul>

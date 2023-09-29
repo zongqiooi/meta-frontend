@@ -9,6 +9,7 @@ import TestimonialUser3 from "../assets/human.png";
 import TestimonialUser4 from "../assets/profile.png";
 import AboutImage1 from "../assets/restauranfood.jpg";
 import AboutImage2 from "../assets/restauranfood.jpg";
+import { NavLink } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -22,7 +23,12 @@ const Main = () => {
               We are family owned Mediterranean restaurant, focused on
               traditional recipes served with a modern twist.
             </p>
-            <button className="reserve-button">Reserve a Table</button>
+            <NavLink
+              to="/reservations"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              <button className="reserve-button">Reserve a Table</button>
+            </NavLink>
           </div>
           <div className="right-hero">
             <img
