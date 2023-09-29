@@ -1,8 +1,12 @@
+import Logo from "../assets/Logo.svg";
+
 const Footer = () => {
   return (
     <footer id="footer">
       <div className="footer-flex-container">
-        <div></div>
+        <div className="footer-left">
+          <img src={Logo} alt="Little Lemon Restaurant Logo" />
+        </div>
         <div className="footer-item-flex-container">
           <h2>Navigation</h2>
           <ul className="footer-list">
@@ -14,7 +18,7 @@ const Footer = () => {
             <li>Login</li>
           </ul>
         </div>
-        <div className="footer-item-flex-container">
+        <div className="footer-item-flex-container footer-contact">
           <h2>Contact</h2>
           <ul className="footer-list">
             <li>61, Sillicon Valley.</li>

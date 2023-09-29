@@ -7,6 +7,8 @@ import TestimonialUser1 from "../assets/woman.png";
 import TestimonialUser2 from "../assets/man.png";
 import TestimonialUser3 from "../assets/human.png";
 import TestimonialUser4 from "../assets/profile.png";
+import AboutImage1 from "../assets/restauranfood.jpg";
+import AboutImage2 from "../assets/restauranfood.jpg";
 
 const Main = () => {
   return (
@@ -26,8 +28,8 @@ const Main = () => {
             <img
               src={HeroImage}
               alt="Hero Food Image"
-              width={350}
-              height={400}
+              width={300}
+              height={300}
             />
           </div>
         </div>
@@ -179,14 +181,29 @@ const Main = () => {
 
       <section id="about">
         <div className="hero-flex-container">
-          <div className="left-hero">
+          <div className="left-about">
             <h1>Little Lemon</h1>
             <h3>Chichago</h3>
             <p>
               We are family owned Mediterranean restaurant, focused on
               traditional recipes served with a modern twist.
             </p>
-            <button className="reserve-button">Reserve a Table</button>
+          </div>
+          <div className="right-about">
+            <div className="about-image-container">
+              <img
+                className="about-image-1"
+                src={AboutImage1}
+                alt="About Image"
+                width={250}
+              />
+              <img
+                className="about-image-2"
+                src={AboutImage2}
+                alt="About Image"
+                width={250}
+              />
+            </div>
           </div>
         </div>
       </section>
