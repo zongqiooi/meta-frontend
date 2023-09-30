@@ -6,7 +6,7 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -44,10 +44,14 @@ const Nav = () => {
             icon={<MenuIcon />}
           />
           <MenuList>
-            <MenuItem>Home</MenuItem>
+            <Link to="/">
+              <MenuItem>Home</MenuItem>
+            </Link>
             <MenuItem>About</MenuItem>
             <MenuItem>Menu</MenuItem>
-            <MenuItem>Reservations</MenuItem>
+            <Link to="/reservations">
+              <MenuItem>Reservations</MenuItem>
+            </Link>
             <MenuItem>Order Online</MenuItem>
             <MenuItem>Login</MenuItem>
           </MenuList>

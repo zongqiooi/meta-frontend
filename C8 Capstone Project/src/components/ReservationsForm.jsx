@@ -1,47 +1,113 @@
-import { Input, Select, Button } from "@chakra-ui/react";
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import {
+  Input,
+  Select,
+  Button,
+  FormControl,
+  FormLabel,
+} from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import ChefImg1 from "../assets/restaurant chef B.jpg";
 import ChefImg2 from "../assets/Mario and Adrian A.jpg";
 import ChefImg3 from "../assets/Mario and Adrian b.jpg";
+import { Link } from "react-router-dom";
 
-const ReservationsForm = () => {
+const ReservationsForm = ({ availableTimes, updateTimes }) => {
   const [guestNum, setGuestNum] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [occassion, setOccassion] = useState("");
-  const availableTimes = [
-    "16:00",
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ];
+  const [occasion, setOccasion] = useState("");
+  const [formValid, setFormValid] = useState(false);
+
+  useEffect(() => {
+    const guestNumCheck = () => {
+      if (guestNum < 1 || guestNum > 10) {
+        console.log("Please enter 1 to 10 guest numbers.");
+        return false;
+      }
+
+      return true;
+    };
+
+    const dateCheck = () => {
+      if (date === "") {
+        console.log("Please select a date.");
+        return false;
+      }
+
+      return true;
+    };
+
+    const timeCheck = () => {
+      if (time === "") {
+        console.log("Please select a time.");
+        return false;
+      }
+
+      return true;
+    };
+
+    const occasionCheck = () => {
+      if (occasion === "") {
+        console.log("Please select an occasion.");
+        return false;
+      }
+
+      return true;
+    };
+
+    const checkForm = () => {
+      let check1 = guestNumCheck();
+      let check2 = dateCheck();
+      let check3 = timeCheck();
+      let check4 = occasionCheck();
+
+      if (
+        check1 === false ||
+        check2 === false ||
+        check3 === false ||
+        check4 === false
+      ) {
+        return false;
+      } else {
+        return true;
+      }
+    };
+
+    let isFormValid = checkForm();
+
+    if (isFormValid === true) {
+      setFormValid(isFormValid);
+    } else {
+      setFormValid(isFormValid);
+    }
+  }, [guestNum, date, time, occasion]);
 
   return (
     <>
       <div className="reservations-top">
         <h1 className="reservations-header">Reservations</h1>
-        <form>
+        <FormControl isRequired>
           <div className="reservations-form">
             <div className="reservations-input">
-              <label htmlFor="res-date">Choose date</label>
+              <FormLabel htmlFor="res-date">Choose date</FormLabel>
               <Input
                 value={date}
                 onChange={(event) => setDate(event.target.value)}
                 type="date"
                 id="res-date"
+                data-test-id="res-date"
                 style={{ backgroundColor: "white" }}
               />
             </div>
             <div className="reservations-input">
-              <label htmlFor="res-time">Choose time</label>
+              <FormLabel htmlFor="res-time">Choose time</FormLabel>
               <Select
                 value={time}
                 onChange={(event) => setTime(event.target.value)}
                 placeholder="Select a time"
                 id="res-time"
+                data-test-id="res-time"
                 style={{ backgroundColor: "white" }}
               >
                 {availableTimes.map((time, idx) => (
@@ -49,17 +115,10 @@ const ReservationsForm = () => {
                     {time}
                   </option>
                 ))}
-
-                {/* <option value="17:00">17:00</option>
-                <option value="18:00">18:00</option>
-                <option value="19:00">19:00</option>
-                <option value="20:00">20:00</option>
-                <option value="21:00">21:00</option>
-                <option value="22:00">22:00</option> */}
               </Select>
             </div>
             <div className="reservations-input">
-              <label htmlFor="guests">Number of guests</label>
+              <FormLabel htmlFor="guests">Number of guests</FormLabel>
               <Input
                 value={guestNum}
                 onChange={(event) => setGuestNum(event.target.value)}
@@ -67,16 +126,18 @@ const ReservationsForm = () => {
                 min="1"
                 max="10"
                 id="guests"
+                data-test-id="guests"
                 style={{ backgroundColor: "white" }}
               />
             </div>
             <div className="reservations-input">
-              <label htmlFor="occasion">Occasion</label>
+              <FormLabel htmlFor="occasion">Occasion</FormLabel>
               <Select
-                value={occassion}
-                onChange={(event) => setOccassion(event.target.value)}
+                value={occasion}
+                onChange={(event) => setOccasion(event.target.value)}
                 placeholder="Select an occasion"
                 id="occasion"
+                data-test-id="occasion"
                 style={{ backgroundColor: "white" }}
               >
                 <option value="Birthday">Birthday</option>
@@ -86,11 +147,30 @@ const ReservationsForm = () => {
           </div>
           <br />
           <div className="reservations-submit-button">
-            <Button type="submit" colorScheme="yellow">
-              Make Your reservation
+            <Button
+              aria-label="On Click"
+              onClick={(e) => {
+                e.preventDefault();
+                updateTimes(time);
+              }}
+              type="submit"
+              colorScheme="yellow"
+              isDisabled={!formValid}
+            >
+              <Link
+                to="/confirmed"
+                state={{
+                  guestNum: guestNum,
+                  date: date,
+                  time: time,
+                  occasion: occasion,
+                }}
+              >
+                Make Your Reservations
+              </Link>
             </Button>
           </div>
-        </form>
+        </FormControl>
       </div>
 
       <div className="reservations-bottom">

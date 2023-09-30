@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
 import ReservationsForm from "../components/ReservationsForm";
 
-const ReservationsPage = () => {
+const ReservationsPage = ({ availableTimes, updateTimes }) => {
   return (
     <>
-      <ReservationsForm />
+      <ReservationsForm
+        availableTimes={availableTimes}
+        updateTimes={updateTimes}
+      />
     </>
   );
 };
